@@ -17,32 +17,32 @@ function Sidebar() {
     }
   }
   return (
-    <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb:10 ">
+    <div className='ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb:10 '>
       {activeMenu && (
         <>
-          <div className="flex justify-between items-center">
+          <div className='flex justify-between items-center'>
             <Link
-              to="/"
+              to='/'
               onClick={handleCloseSideBar}
-              className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900 "
+              className='items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900 '
             >
               <SiShopware />
               <span>Shopee</span>
             </Link>
-            <TooltipComponent content="Menu" position="BottomCenter">
+            <TooltipComponent content='Menu' position='BottomCenter'>
               <button
-                type="button"
+                type='button'
                 onClick={() => setActiveMenu((prevState) => !prevState)}
-                className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+                className='text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden'
               >
                 <MdOutlineCancel />
               </button>
             </TooltipComponent>
           </div>
-          <div className="mt-10">
+          <div className='mt-10'>
             {links.map((item) => (
               <div key={item.title}>
-                <p className="text-gray-400 m-3 mt-4 uppercase">{item.title}</p>
+                <p className='text-gray-400 m-3 mt-4 uppercase'>{item.title}</p>
                 {item.links.map((link) => (
                   <NavLink
                     to={`/${link.name}`}
@@ -53,7 +53,7 @@ function Sidebar() {
                     }
                   >
                     {link.icon}
-                    <span className="capitalize">{link.name}</span>
+                    <span className='capitalize'>{link.name}</span>
                   </NavLink>
                 ))}
               </div>
